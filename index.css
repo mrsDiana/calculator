@@ -1,0 +1,52 @@
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+ul,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.company-list {
+  /* display: flex; */
+  flex-direction: column;
+  gap: 20px;
+}
+
+.company {
+  display: grid;
+  grid-template-columns: 200px 300px;
+}
+.company-name {
+  display: grid;
+  grid-template-columns: 150px 50px;
+  align-items: center;
+}
+.company-price {
+  display: flex;
+  align-items: center;
+}
+
+.diagram-column {
+  height: 20px;
+  width: 0px;
+  background-color: rgba(128, 128, 128, 0.377);
+}

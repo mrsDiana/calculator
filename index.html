@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Calculator</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="https://github.com/mrsDiana">Github</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/mrs-diana-bukovska/"
+              >Linkedin</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <p>Storage: <span id="storage-selected-value">100</span> GB</p>
+        <input
+          id="storage-price"
+          type="range"
+          value="100"
+          min="0"
+          max="1000"
+          step="1"
+        />
+        <p>Transfer: <span id="transfer-selected-value">400</span> GB</p>
+        <input
+          id="transfer-price"
+          type="range"
+          value="400"
+          min="0"
+          max="1000"
+          step="1"
+        />
+      </section>
+      <section>
+        <ul class="company-list">
+          <li class="company">
+            <div class="company-name">
+              <p>Backblaze</p>
+              <a href="http://backblaze.com">
+                <img
+                  src="https://wasabi.com/wp-content/themes/wasabi/dist/img/aws-calc.png"
+                  alt=""
+                  width="30px"
+                  height="20px"
+              /></a>
+            </div>
+            <div class="company-price">
+              <div id="backblaze" class="diagram-column"></div>
+              <p><span class="backblaze-price price"></span>&#36;</p>
+            </div>
+          </li>
+          <li class="company">
+            <div class="company-name">
+              <form class="bunny-type">
+                <p>Bunny</p>
+                <label>
+                  <input type="radio" name="bunny" value="hdd" checked />
+                  HDD
+                </label>
+                <label>
+                  <input type="radio" name="bunny" value="ssd" />
+                  SSD
+                </label>
+              </form>
+              <a href="http://bunny.net">
+                <img
+                  src="https://wasabi.com/wp-content/themes/wasabi/dist/img/aws-calc.png"
+                  alt=""
+                  width="30px"
+                  height="20px"
+              /></a>
+            </div>
+            <div class="company-price">
+              <div id="bunny" class="diagram-column"></div>
+              <p><span class="bunny-price price"></span>&#36;</p>
+            </div>
+          </li>
+          <li class="company">
+            <div class="company-name">
+              <form class="scaleway-type">
+                <p>Scaleway</p>
+                <label>
+                  <input type="radio" name="scaleway" value="multi" checked />
+                  Multi
+                </label>
+                <label>
+                  <input type="radio" name="scaleway" value="single" />
+                  Single
+                </label>
+              </form>
+              <a href="http://scaleway.com">
+                <img
+                  src="https://wasabi.com/wp-content/themes/wasabi/dist/img/aws-calc.png"
+                  alt=""
+                  width="30px"
+                  height="20px"
+              /></a>
+            </div>
+            <div class="company-price">
+              <div id="scaleway" class="diagram-column"></div>
+              <p><span class="scaleway-price price"></span>&#36;</p>
+            </div>
+          </li>
+          <li class="company">
+            <div class="company-name">
+              <p>Vultr</p>
+              <a href="http://vultr.com">
+                <img
+                  src="https://wasabi.com/wp-content/themes/wasabi/dist/img/aws-calc.png"
+                  alt=""
+                  width="30px"
+                  height="20px"
+              /></a>
+            </div>
+            <div class="company-price">
+              <div id="vultr" class="diagram-column"></div>
+              <p><span class="vultr-price price"></span>&#36;</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
