@@ -23,26 +23,34 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <section>
-        <p>Storage: <span id="storage-selected-value">100</span> GB</p>
-        <input
-          id="storage-price"
-          type="range"
-          value="100"
-          min="0"
-          max="1000"
-          step="1"
-        />
-        <p>Transfer: <span id="transfer-selected-value">400</span> GB</p>
-        <input
-          id="transfer-price"
-          type="range"
-          value="400"
-          min="0"
-          max="1000"
-          step="1"
-        />
+    <main class="calculator">
+      <section class="input-param">
+        <div>
+          <p class="selected-value">
+            Storage: <span id="storage-selected-value">100</span> GB
+          </p>
+          <input
+            id="storage-price"
+            type="range"
+            value="100"
+            min="0"
+            max="1000"
+            step="1"
+          />
+        </div>
+        <div>
+          <p class="selected-value">
+            Transfer: <span id="transfer-selected-value">400</span> GB
+          </p>
+          <input
+            id="transfer-price"
+            type="range"
+            value="400"
+            min="0"
+            max="1000"
+            step="1"
+          />
+        </div>
       </section>
       <section>
         <ul class="company-list">
@@ -64,14 +72,25 @@
           </li>
           <li class="company">
             <div class="company-name">
-              <form class="bunny-type">
+              <form class="bunny-type type">
                 <p>Bunny</p>
                 <label>
-                  <input type="radio" name="bunny" value="hdd" checked />
+                  <input
+                    class="checked"
+                    type="radio"
+                    name="bunny"
+                    value="hdd"
+                    checked
+                  />
                   HDD
                 </label>
                 <label>
-                  <input type="radio" name="bunny" value="ssd" />
+                  <input
+                    class="checked"
+                    type="radio"
+                    name="bunny"
+                    value="ssd"
+                  />
                   SSD
                 </label>
               </form>
@@ -90,14 +109,25 @@
           </li>
           <li class="company">
             <div class="company-name">
-              <form class="scaleway-type">
+              <form class="scaleway-type type">
                 <p>Scaleway</p>
                 <label>
-                  <input type="radio" name="scaleway" value="multi" checked />
+                  <input
+                    class="checked"
+                    type="radio"
+                    name="scaleway"
+                    value="multi"
+                    checked
+                  />
                   Multi
                 </label>
                 <label>
-                  <input type="radio" name="scaleway" value="single" />
+                  <input
+                    class="checked"
+                    type="radio"
+                    name="scaleway"
+                    value="single"
+                  />
                   Single
                 </label>
               </form>

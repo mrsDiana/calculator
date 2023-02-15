@@ -25,28 +25,117 @@ a {
   color: currentColor;
 }
 
-.company-list {
-  /* display: flex; */
-  flex-direction: column;
-  gap: 20px;
+img {
+  display: block;
+  max-width: 15px;
+  height: 10px;
+}
+main {
+  font-size: 7px;
+}
+.calculator {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
-.company {
+.input-param {
+  display: flex;
+  gap: 50px;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+.selected-value {
   display: grid;
-  grid-template-columns: 200px 300px;
+  grid-template-columns: 50px 20px 15px;
+}
+
+#storage-price,
+#transfer-price {
+  width: 80px;
+}
+
+.company-list {
+  display: flex;
+  gap: 20px;
+}
+.company {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
 }
 .company-name {
   display: grid;
-  grid-template-columns: 150px 50px;
+  grid-template-rows: 20px 20px;
   align-items: center;
+  justify-items: center;
 }
 .company-price {
   display: flex;
-  align-items: center;
+  flex-direction: column-reverse;
+  height: 100px;
+  width: 20px;
 }
 
-.diagram-column {
-  height: 20px;
-  width: 0px;
-  background-color: rgba(128, 128, 128, 0.377);
+.checked {
+  display: inline-flex;
+  align-items: flex-end;
+  width: 5px;
+  height: 5px;
+}
+
+@media screen and (min-width: 401px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  main {
+    font-size: 16px;
+  }
+  .calculator {
+    display: block;
+  }
+
+  .selected-value {
+    grid-template-columns: 80px 35px 25px;
+  }
+  #storage-price,
+  #transfer-price {
+    width: 140px;
+  }
+
+  .company-list {
+    flex-direction: column;
+  }
+
+  .company {
+    display: grid;
+    grid-template-columns: 200px 300px;
+  }
+
+  .company-name {
+    grid-template-rows: min-content;
+    grid-template-columns: 150px 50px;
+    justify-items: flex-start;
+  }
+
+  .company-price {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    height: 20px;
+    width: 100%;
+  }
+
+  .diagram-column {
+    height: 20px;
+    width: 0px;
+    background-color: rgba(128, 128, 128, 0.377);
+  }
+
+  .checked {
+    display: inline;
+    width: 10px;
+    height: 10px;
+  }
 }

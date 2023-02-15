@@ -56,16 +56,23 @@ function calculator(storageValueGB, transferValueGB, storagePrice, provider) {
   const rezult = storageValueGB * storagePrice + transferValueGB * transfer;
   if (rezult <= min) {
     textContentValue(price, min.toFixed(2));
-    return (name.style.width = `${min * 5}px`);
+    if (window.screen.width < 400) {
+      return (name.style.height = `${min}px`);
+    }
+    return (name.style.width = `${min}px`);
   }
   if (rezult >= max) {
     textContentValue(price, max.toFixed(2));
-
-    return (name.style.width = `${max * 5}px`);
+    if (window.screen.width < 400) {
+      return (name.style.height = `${max}px`);
+    }
+    return (name.style.width = `${max}px`);
   }
   textContentValue(price, rezult.toFixed(2));
-
-  name.style.width = `${rezult * 5}px`;
+  if (window.screen.width < 400) {
+    return (name.style.height = `${rezult}px`);
+  }
+  return (name.style.width = `${rezult}px`);
 }
 // функція для вибору вартості інтернету в залежності від параметрів
 function selectedParams(storageOutput, transferOutput) {
